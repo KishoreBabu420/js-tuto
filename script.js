@@ -280,31 +280,88 @@ function checkAnswer(question, answer) {
 // checkAnswer('India', 'New Delhi');
 // checkAnswer('USA', 'Washington');
 
-const capitals = [
-  {
-    question: 'India',
-    answer: 'New Delhi',
-  },
-  {
-    question: 'USA',
-    answer: 'Washington',
-  },
-];
+// const capitals = [
+//   {
+//     question: 'India',
+//     answer: 'New Delhi',
+//   },
+//   {
+//     question: 'USA',
+//     answer: 'Washington',
+//   },
+// ];
 
-function checkGame(questions) {
-  for (let i = 0; i < questions.length; i++) {
-    checkAnswer(questions[i].question, questions[i].answer);
+// function checkGame(questions) {
+//   for (let i = 0; i < questions.length; i++) {
+//     checkAnswer(questions[i].question, questions[i].answer);
+//   }
+
+//   alert(`Final Score: ${score}`);
+// }
+
+// // checkGame(capitals);
+
+// //template literals
+
+// let username = 'Kishore';
+
+// console.log('Hi', username);
+// console.log('Hi ' + username);
+// console.log(`Hi ${username}`);
+
+let result = '';
+
+function playGame(user) {
+  let comp = getCompInput();
+
+  if (user === 'rock') {
+    if (comp === 'rock') {
+      result = 'draw';
+    } else if (comp === 'paper') {
+      result = 'lose';
+    } else if (comp === 'scissors') {
+      result = 'win';
+    }
+  } else if (user === 'paper') {
+    if (comp === 'rock') {
+      result = 'win';
+    } else if (comp === 'paper') {
+      result = 'draw';
+    } else if (comp === 'scissors') {
+      result = 'lose';
+    }
+  } else if (user === 'scissors') {
+    if (comp === 'rock') {
+      result = 'lose';
+    } else if (comp === 'paper') {
+      result = 'win';
+    } else if (comp === 'scissors') {
+      result = 'win';
+    }
   }
 
-  alert(`Final Score: ${score}`);
+  return result;
 }
 
-// checkGame(capitals);
+function getCompInput() {
+  let computerInput = '';
 
-//template literals
+  let randomNumber = Math.trunc(Math.random() * 3);
 
-let username = 'Kishore';
+  if (randomNumber === 0) {
+    computerInput = 'rock';
+  } else if (randomNumber === 1) {
+    computerInput = 'paper';
+  } else if (randomNumber === 2) {
+    computerInput = 'scissors';
+  }
 
-console.log('Hi', username);
-console.log('Hi ' + username);
-console.log(`Hi ${username}`);
+  return computerInput;
+}
+
+console.log(playGame('rock'));
+console.log(playGame('paper'));
+console.log(playGame('rock'));
+console.log(playGame('scissors'));
+console.log(playGame('rock'));
+console.log(playGame('paper'));
