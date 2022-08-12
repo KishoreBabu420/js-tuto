@@ -309,59 +309,242 @@ function checkAnswer(question, answer) {
 // console.log('Hi ' + username);
 // console.log(`Hi ${username}`);
 
-let result = '';
+// let result = '';
 
-function playGame(user) {
-  let comp = getCompInput();
+// function playGame(user) {
+//   let comp = getCompInput();
 
-  if (user === 'rock') {
-    if (comp === 'rock') {
-      result = 'draw';
-    } else if (comp === 'paper') {
-      result = 'lose';
-    } else if (comp === 'scissors') {
-      result = 'win';
-    }
-  } else if (user === 'paper') {
-    if (comp === 'rock') {
-      result = 'win';
-    } else if (comp === 'paper') {
-      result = 'draw';
-    } else if (comp === 'scissors') {
-      result = 'lose';
-    }
-  } else if (user === 'scissors') {
-    if (comp === 'rock') {
-      result = 'lose';
-    } else if (comp === 'paper') {
-      result = 'win';
-    } else if (comp === 'scissors') {
-      result = 'win';
-    }
-  }
+//   if (user === 'rock') {
+//     if (comp === 'rock') {
+//       result = 'draw';
+//     } else if (comp === 'paper') {
+//       result = 'lose';
+//     } else if (comp === 'scissors') {
+//       result = 'win';
+//     }
+//   } else if (user === 'paper') {
+//     if (comp === 'rock') {
+//       result = 'win';
+//     } else if (comp === 'paper') {
+//       result = 'draw';
+//     } else if (comp === 'scissors') {
+//       result = 'lose';
+//     }
+//   } else if (user === 'scissors') {
+//     if (comp === 'rock') {
+//       result = 'lose';
+//     } else if (comp === 'paper') {
+//       result = 'win';
+//     } else if (comp === 'scissors') {
+//       result = 'win';
+//     }
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-function getCompInput() {
-  let computerInput = '';
+// function getCompInput() {
+//   let computerInput = '';
 
-  let randomNumber = Math.trunc(Math.random() * 3);
+//   let randomNumber = Math.trunc(Math.random() * 3);
 
-  if (randomNumber === 0) {
-    computerInput = 'rock';
-  } else if (randomNumber === 1) {
-    computerInput = 'paper';
-  } else if (randomNumber === 2) {
-    computerInput = 'scissors';
-  }
+//   if (randomNumber === 0) {
+//     computerInput = 'rock';
+//   } else if (randomNumber === 1) {
+//     computerInput = 'paper';
+//   } else if (randomNumber === 2) {
+//     computerInput = 'scissors';
+//   }
 
-  return computerInput;
-}
+//   return computerInput;
+// }
 
-console.log(playGame('rock'));
-console.log(playGame('paper'));
-console.log(playGame('rock'));
-console.log(playGame('scissors'));
-console.log(playGame('rock'));
-console.log(playGame('paper'));
+// console.log(playGame('rock'));
+// console.log(playGame('paper'));
+// console.log(playGame('rock'));
+// console.log(playGame('scissors'));
+// console.log(playGame('rock'));
+// console.log(playGame('paper'));
+
+// let numbers = [1, 2, 3, 4, 5, 6];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i]);
+// }
+
+//for in for of
+
+// function sum(a) {
+//   let sum = 0;
+
+//   for (let i = 0; i < arguments.length; i++) {
+//     sum += arguments[i];
+//   }
+
+//   return sum;
+// }
+
+// console.log(sum(2, 3, 5, 4, 6, 8));
+
+// function square(n) {
+//   return n * n;
+// }
+
+// console.log(square(5));
+
+// function cube(n, func) {
+//   return n * func(n);
+// }
+
+// console.log(cube(3, square));
+
+//setTimeout setInterval
+
+// setTimeout(() => {
+//   console.log(3);
+// }, 3000);
+
+// let seconds = 0;
+// let minutes = 0;
+// setInterval(() => {
+//   seconds++;
+//   if (seconds === 59) {
+//     seconds = 0;
+//     minutes++;
+//   }
+//   console.log(`${minutes} : ${seconds}`);
+// }, 1000);
+
+//destructuring
+
+// const numberOne = numbers[0];
+// const numberTwo = numbers[1];
+
+// console.log(a, b, c, d);
+
+// const user = {
+//   name: 'Rajesh',
+//   city: 'Chennai',
+//   work: 'artist',
+// };
+
+// const { name } = user;
+
+// console.log(name);
+
+// // spread and rest ...
+
+// // console.log(1, 2, 3, 4, 6);
+// // console.log(...numbers);
+
+// const numbers = [1, 2, 3, 4, 6];
+
+// const [a, b, ...rem] = numbers;
+
+// console.log(rem);
+
+// console.log({ ...user });
+
+// const newPerson = ;
+
+// const updatedPeople = [...people, newPerson];
+
+// console.log(updatedPeople);
+
+// console.log(people);
+
+// const dog = { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] };
+
+// const updatedDog = { ...dog, weight: 23, curFood: 350, place: 'Chennai' };
+
+// console.log(updatedDog)
+
+//forEach, map, filter, reduce, find, sort
+
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i]);
+// }
+
+// console.log('-------------');
+
+// forEach - undefined, clean Method
+// const result = numbers.forEach(function (value, index, arr) {
+//   console.log(arr);
+// });
+
+// console.log(result);
+
+//map - array, clean Method
+
+// const double = numbers.map((number) => {
+//   return number / 5;
+// });
+
+// console.log(double);
+
+//filter - return array, clean Method
+// const filtered = numbers.filter((value) => {
+//   return value < 5;
+// });
+
+// const people = [
+//   { id: 1, firstName: 'Kishore', city: 'Chennai' },
+//   { id: 2, firstName: 'Rajesh', city: 'Mumbai' },
+//   { id: 3, firstName: 'Harish', city: 'Chennai' },
+// ];
+
+// const chennai = people.filter((value) => {
+//   return value.city !== 'Chennai';
+// });
+
+// console.log(chennai);
+
+// //Find - return singleValue clean Method
+
+// const mumbai = people.find((value) => {
+//   return value.city === 'Mumbai';
+// });
+
+// console.log(mumbai);
+
+// const upd = numbers.find((value) => {
+//   return value > 6;
+// });
+
+// console.log(upd);
+
+// let numbers = [1, 2, 3, 4, 5];
+
+//Reduce - return single value, clean Method
+// let total = numbers.reduce((acc, value) => {
+//   return acc + value;
+// }, 100);
+
+// console.log(total);
+
+let words = [
+  'Burki',
+  'Schulz',
+  'Hummels',
+  'Akanji',
+  'Hakimi',
+  'Weigl',
+  'Witsel',
+  'Hazard',
+  'Brandt',
+  'Sancho',
+  'Gotze',
+];
+
+//sort
+let sortedWords = words.sort();
+
+console.log(sortedWords);
+
+let numbers = [4, 51, 111, 189, 19, 12, 4252, 55, 1, 2, 7, 8, 9];
+
+let sortedNumbers = numbers.sort((a, b) => {
+  return b - a;
+});
+
+console.log(sortedNumbers);
