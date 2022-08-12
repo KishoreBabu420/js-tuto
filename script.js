@@ -522,29 +522,115 @@ function checkAnswer(question, answer) {
 
 // console.log(total);
 
-let words = [
-  'Burki',
-  'Schulz',
-  'Hummels',
-  'Akanji',
-  'Hakimi',
-  'Weigl',
-  'Witsel',
-  'Hazard',
-  'Brandt',
-  'Sancho',
-  'Gotze',
-];
+// let words = [
+//   'Burki',
+//   'Schulz',
+//   'Hummels',
+//   'Akanji',
+//   'Hakimi',
+//   'Weigl',
+//   'Witsel',
+//   'Hazard',
+//   'Brandt',
+//   'Sancho',
+//   'Gotze',
+// ];
 
-//sort
-let sortedWords = words.sort();
+// //sort
+// let sortedWords = words.sort();
 
-console.log(sortedWords);
+// console.log(sortedWords);
 
-let numbers = [4, 51, 111, 189, 19, 12, 4252, 55, 1, 2, 7, 8, 9];
+// let numbers = [4, 51, 111, 189, 19, 12, 4252, 55, 1, 2, 7, 8, 9];
 
-let sortedNumbers = numbers.sort((a, b) => {
-  return b - a;
-});
+// let sortedNumbers = numbers.sort((a, b) => {
+//   return b - a;
+// });
 
-console.log(sortedNumbers);
+// console.log(sortedNumbers);
+
+// Create a function 'checkDogs', which accepts 2 arrays of dog's ages
+// ('dogsJulia' and 'dogsKate'), and does the following things:
+// 1. Julia found out that the owners of the first and the last two dogs actually have
+// cats, not dogs! So create a shallow copy of Julia's array, and remove the cat
+// ages from that copied array (because it's a bad practice to mutate function
+// parameters)
+// 2. Create an array with both Julia's (corrected) and Kate's data
+// 3. For each remaining dog, log to the console whether it's an adult ("Dog number 1
+// is an adult, and is 5 years old") or a puppy ("Dog number 2 is still a puppy
+// 🐶
+// ")
+// 4. Run the function for both test datasets
+// Test data:
+// , ;
+
+// function checkDogs(juliaDogs, kateDogs) {
+//   let juliaCorrectedDogs = [...juliaDogs];
+//   juliaCorrectedDogs.pop();
+//   juliaCorrectedDogs.pop();
+//   juliaCorrectedDogs.shift();
+
+//   let allDogs = [...juliaCorrectedDogs, ...kateDogs];
+//   console.log(allDogs);
+
+//   allDogs.forEach((age, index) => {
+//     if (age >= 3) {
+//       console.log(
+//         `Dog number ${index + 1} is an adult, and is ${age} years old`,
+//       );
+//     } else {
+//       console.log(`Dog number ${index + 1} is still a puppy`);
+//     }
+//   });
+// }
+
+// checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+
+// checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+
+function calcAverageHumanAge(ages) {
+  // const dogsToHumanAge1 = ages.map((age) => {
+  //   if (age <= 2) {
+  //     return age * 2;
+  //   } else {
+  //     return 16 + age * 4;
+  //   }
+  // });
+
+  // const dogsToHumanAge = ages.map((age) => (age <= 2 ? age * 2 : 16 + age * 4));
+
+  // const adultDogs1 = dogsToHumanAge.filter((age) => {
+  //   return age > 18;
+  // });
+
+  // const adultDogs = ages
+  //   .map((age) => (age <= 2 ? age * 2 : 16 + age * 4))
+  //   .filter((age) => age > 18);
+
+  // const averageAges = adultDogs.reduce((acc, age) => {
+  //   return acc + age;
+  // });
+  // const averageAges = ages
+  //   .map((age) => (age <= 2 ? age * 2 : 16 + age * 4))
+  //   .filter((age) => age > 18)
+  //   .reduce((acc, age) => acc + age);
+
+  // const average = averageAges / adultDogs.length;
+
+  const average = ages
+    .map((age) => (age <= 2 ? age * 2 : 16 + age * 4))
+    .filter((age) => age > 18)
+    .reduce((acc, age, index, arr) => acc + age / arr.length, 0);
+
+  return +average.toFixed(2);
+}
+
+console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]));
+
+// const sum = (a, b) => {
+//   return a + b;
+// };
+// const sumA = (a, b) => a + b;
+
+// console.log(sum(2, 3));
+// console.log(sumA(2, 3));
