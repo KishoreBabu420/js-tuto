@@ -686,23 +686,195 @@
 
 // we need to display the result according to Selection
 
-const formEl = document.getElementById('form');
-const oneEl = document.getElementById('one');
-const twoEl = document.getElementById('two');
-const operatorEl = document.getElementById('operator');
-const outputEl = document.getElementById('output');
+// const formEl = document.getElementById('form');
+// const oneEl = document.getElementById('one');
+// const twoEl = document.getElementById('two');
+// const operatorEl = document.getElementById('operator');
+// const outputEl = document.getElementById('output');
 
-formEl.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const numberOne = Number(oneEl.value);
-  const numberTwo = Number(twoEl.value);
-  const operator = operatorEl.value;
+// formEl.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   const numberOne = Number(oneEl.value);
+//   const numberTwo = Number(twoEl.value);
+//   const operator = operatorEl.value;
 
-  // if (operator === '+') {
-  //   outputEl.innerText = numberOne + numberTwo;
-  // } else if (operator === '-') {
-  //   outputEl.innerText = numberOne - numberTwo;
-  // }
+//   // if (operator === '+') {
+//   //   outputEl.innerText = numberOne + numberTwo;
+//   // } else if (operator === '-') {
+//   //   outputEl.innerText = numberOne - numberTwo;
+//   // }
 
-  outputEl.textContent = eval(`${numberOne} ${operator} ${numberTwo}`);
-});
+//   outputEl.textContent = eval(`${numberOne} ${operator} ${numberTwo}`);
+// });
+
+// const btns = document.querySelectorAll('#btn-open');
+// const btnClose = document.getElementById('btn-close');
+
+// const modalEl = document.getElementById('modal');
+
+// btns.forEach((btn) => {
+//   btn.addEventListener('click', () => {
+//     modalEl.classList.remove('close-modal');
+//     modalEl.classList.add('show-modal');
+//   });
+// });
+
+// btnClose.addEventListener('click', () => {
+//   modalEl.classList.remove('show-modal');
+//   modalEl.classList.add('close-modal');
+// });
+
+// document.addEventListener('keydown', (e) => {
+//   console.log(e.key);
+
+//   if (e.key === 'Escape') {
+//     modalEl.classList.remove('show-modal');
+//     modalEl.classList.add('close-modal');
+//   }
+// });
+
+// 1. Create two objects with name, power, and yuga as Ram, 2500, Treta. Krishna, 2325, Dwapar. Write a function which takes two objects and return the person with more `power`.
+
+// const user1 = {
+//   name: 'Ram',
+//   power: 2500,
+//   yuga:'Treta'
+// }
+
+// const user2 = {
+//   name: 'Krishna',
+//   power: 2325,
+//   yuga: 'Dwapar',
+// };
+
+// if(user1.power > user2.power){
+//   console.log(user1.name)
+// }else if(user2.power > user2.power){
+//   console.log(user2.name)
+// }else{
+//   console.log('Equal')
+// }
+
+// function showHigh(obj1, obj2){
+//   if (obj1.power > obj2.power) {
+//     console.log(obj1.name);
+//   } else if (obj2.power > obj2.power) {
+//     console.log(obj2.name);
+//   } else {
+//     console.log('Equal');
+//   }
+// }
+
+//Create a password checker web app. If password is lesser than 10 characters then show an error to user otherwise show success.
+
+//try & catch
+//promises
+//async await
+//fetch ()
+//browser storage
+'use strict';
+// let a = null;
+// let b = '';
+// try {
+//   a = 5;
+//   b = 'javaScript';
+//   c = 'apple';
+//   console.log(a, b);
+// } catch (err) {
+//   console.log(err.name);
+
+//   if (err.name === 'ReferenceError') {
+//     alert('Declare C first');
+//   }
+// } finally {
+//   console.log(c);
+// }
+
+// console.log('first line');
+// console.log('second line');
+
+// timer(200000);
+// console.log('third line');
+
+// async function timer(time) {
+//   await setTimeout(() => {
+//     console.log('Done');
+//   }, time);
+// }
+
+// const url = 'https://randomuser.me/api/';
+
+// console.log(fetch(url));
+
+// const fetchUser = function () {
+//   fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       user = data;
+//     });
+// };
+
+// let user;
+// const fetchUser = async function () {
+//   const response = await fetch(url);
+
+//   const data = await response.json();
+
+//   user = data;
+
+//   console.log(user);
+// };
+
+// fetchUser();
+
+// const inputEl = document.getElementById('input');
+// const outputEl = document.getElementById('output');
+// const btnTranslate = document.getElementById('submit');
+
+// const url = 'https://api.funtranslations.com/translate/cheunh.json';
+
+// btnTranslate.addEventListener('click', async () => {
+//   const userInput = inputEl.value;
+//   // console.log(userInput);
+//   const textUrl = url + '?text=' + userInput;
+
+//   const response = await fetch(textUrl);
+//   const data = await response.json();
+
+//   outputEl.textContent = data.contents.translated;
+// });
+
+let number = 1;
+
+let person = 'Kishore';
+
+let friends = ['Kuamar', 'Rajesh'];
+
+let user = {
+  name: 'Kishore',
+  profession: 'Developer',
+};
+
+//setItem
+
+localStorage.clear();
+
+// localStorage.setItem('number', number);
+// localStorage.setItem('number', 2);
+
+// console.log(localStorage.getItem('number'));
+
+// localStorage.setItem('username', person);
+
+// console.log(localStorage.getItem('username'));
+
+// localStorage.setItem('people', JSON.stringify(friends));
+
+// console.log(JSON.parse(localStorage.getItem('people')));
+
+localStorage.setItem('details', JSON.stringify(user));
+
+console.log(JSON.parse(localStorage.getItem('details')));
+
+localStorage.removeItem('details');

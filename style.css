@@ -1,0 +1,52 @@
+.btn-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.btn-container button {
+  padding: 1rem 1.25rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.modal {
+  width: 750px;
+  height: 750px;
+  border: 2px solid #1d2042;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5 ease-in-out;
+}
+
+.modal p {
+  font-size: 24px;
+  color: wheat;
+  text-align: center;
+}
+
+#btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  display: none;
+}
+
+.show-modal {
+  display: block;
+}
