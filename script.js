@@ -685,3 +685,24 @@
 //user gives three inputs, numberOne, numberTwo, +, -, /, *
 
 // we need to display the result according to Selection
+
+const formEl = document.getElementById('form');
+const oneEl = document.getElementById('one');
+const twoEl = document.getElementById('two');
+const operatorEl = document.getElementById('operator');
+const outputEl = document.getElementById('output');
+
+formEl.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const numberOne = Number(oneEl.value);
+  const numberTwo = Number(twoEl.value);
+  const operator = operatorEl.value;
+
+  // if (operator === '+') {
+  //   outputEl.innerText = numberOne + numberTwo;
+  // } else if (operator === '-') {
+  //   outputEl.innerText = numberOne - numberTwo;
+  // }
+
+  outputEl.textContent = eval(`${numberOne} ${operator} ${numberTwo}`);
+});
